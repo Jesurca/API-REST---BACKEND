@@ -22,7 +22,7 @@ WORKDIR /var/www
 COPY . .
 
 # Instalar dependencias de PHP
-RUN composer install --no-dev --optimize-autoloader
+RUN composer install --no-dev --optimize-autoloader --no-scripts
 
 # Dar permisos a las carpetas de almacenamiento y caché
 RUN chmod -R 777 storage bootstrap/cache
