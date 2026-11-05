@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Comment extends Model
 {
-    // Campos permitidos para asignación masiva (unificando ambos fragmentos)
-    protected $fillable = ['content', 'post_id', 'user_id', 'author'];
+    // 'author' se mantiene en la BD por compatibilidad pero es nullable (no lo usa la API actual)
+    protected $fillable = ['content', 'post_id', 'user_id'];
 
     /**
      * Publicación a la que pertenece el comentario.

@@ -9,8 +9,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Post extends Model
 {
-    // Campos permitidos para asignación masiva (unificando ambos fragmentos)
-    protected $fillable = ['title', 'content', 'user_id', 'likes_count'];
+    protected $fillable = ['title', 'content', 'user_id'];
 
     /**
      * Usuario autor de la publicación.
